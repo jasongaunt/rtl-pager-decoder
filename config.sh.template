@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# SDR host configuration
+RTL_TCP_HOST=127.0.0.1
+RTL_TCP_PORT=1234
+RTL_TCP_SAMPLE_RATE=2048000
+RTL_TCP_MANUAL_GAIN_MODE=0 # 0 for auto gain, 1 for manual gain
+RTL_TCP_GAIN_LEVEL=30      # Only used when RTL_TCP_MANUAL_GAIN_MODE=1, these are tenths of a dB
+
+# List of frequencies to listen to, they MUST all fit within RTL_TCP_SAMPLE_RATE
+RTL_TCP_FREQUENCY_LIST=(
+	446006250 # POCSAG
+	446093750 # FLEX
+)
